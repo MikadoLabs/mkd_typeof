@@ -1,2 +1,3 @@
 # typename
-Improved typeof
+
+Small extended `typeof`.

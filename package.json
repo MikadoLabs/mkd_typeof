@@ -1,0 +1,25 @@
+{
+  "name": "typename",
+  "version": "1.0.0",
+  "description": "Extended typeof",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikadoLabs/typename.git"
+  },
+  "keywords": [
+    "typeof",
+    "javascript",
+    "node",
+    "browser"
+  ],
+  "author": "Mikado labs",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/MikadoLabs/typename/issues"
+  },
+  "homepage": "https://github.com/MikadoLabs/typename#readme"
+}
