@@ -96,6 +96,16 @@ tape('typename new Array() gives "array"', function(test){
     test.equal(typename(new Array()), 'array'); 
     test.end();
 });
+tape('typename new Date() gives "date"', function(test){
+    test.plan(1);
+    test.equal(typename(new Date()), 'date'); 
+    test.end();
+});
+tape('typename new Error("e") gives "error"', function(test){
+    test.plan(1);
+    test.equal(typename(new Error("e")), 'error');
+    test.end();
+});
 tape('typename /a/ gives "regexp"', function(test){
     test.plan(1);
     test.equal(typename(/a/), 'regexp'); 
@@ -104,10 +114,5 @@ tape('typename /a/ gives "regexp"', function(test){
 tape('typename new RegExp("a") gives "regexp"', function(test){
     test.plan(1);
     test.equal(typename(new RegExp("a")), 'regexp'); 
-    test.end();
-});
-tape('typename new Error("e") gives "error"', function(test){
-    test.plan(1);
-    test.equal(typename(new Error("e")), 'error');
     test.end();
 });

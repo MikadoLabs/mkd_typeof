@@ -25,11 +25,25 @@
         case 'object':
             if (data === null)
                 return 'null';
+            if (typeof Set !== 'undefined')
+                if (data.constructor === Set)
+                    return 'set';
+            if (typeof WeakSet !== 'undefined')
+                if (data.constructor === WeakSet)
+                    return 'weakset';
+            if (typeof Map !== 'undefined')
+                if (data.constructor === Map)
+                    return 'map';
+            if (typeof WeakMap !== 'undefined')
+                if (data.constructor === WeakMap)
+                    return 'weakmap';
             switch (data.constructor){
             case Array:
                 return 'array';
             case Boolean:
                 return 'boolean';
+            case Date:
+                return 'date';
             case Error:
                 return 'error';
             case Number:
