@@ -21,29 +21,9 @@ tape('typename 0 gives "number"', function(test){
     test.equal(typename(1), 'number'); 
     test.end();
 });
-tape('typename "0" gives "string"', function(test){
+tape('typename new Number(0) gives "number"', function(test){
     test.plan(1);
-    test.equal(typename("1"), 'string'); 
-    test.end();
-});
-tape('typename false gives "boolean"', function(test){
-    test.plan(1);
-    test.equal(typename(false), 'boolean'); 
-    test.end();
-});
-tape('typename true gives "boolean"', function(test){
-    test.plan(1);
-    test.equal(typename(true), 'boolean'); 
-    test.end();
-});
-tape('typename function(){} gives "function"', function(test){
-    test.plan(1);
-    test.equal(typename(function(){}), 'function'); 
-    test.end();
-});
-tape('typename undefined gives "undefined"', function(test){
-    test.plan(1);
-    test.equal(typename(undefined), 'undefined'); 
+    test.equal(typename(new Number(0)), 'number'); 
     test.end();
 });
 tape('typename NaN gives "nan"', function(test){
@@ -59,6 +39,46 @@ tape('typename Infinity gives "infinity"', function(test){
 tape('typename -Infinity gives "infinity"', function(test){
     test.plan(1);
     test.equal(typename(-Infinity), 'infinity'); 
+    test.end();
+});
+tape('typename "0" gives "string"', function(test){
+    test.plan(1);
+    test.equal(typename("0"), 'string'); 
+    test.end();
+});
+tape('typename new String("0") gives "string"', function(test){
+    test.plan(1);
+    test.equal(typename(new String("0")), 'string'); 
+    test.end();
+});
+tape('typename false gives "boolean"', function(test){
+    test.plan(1);
+    test.equal(typename(false), 'boolean'); 
+    test.end();
+});
+tape('typename true gives "boolean"', function(test){
+    test.plan(1);
+    test.equal(typename(true), 'boolean'); 
+    test.end();
+});
+tape('typename new Boolean(false) gives "boolean"', function(test){
+    test.plan(1);
+    test.equal(typename(new Boolean(false)), 'boolean'); 
+    test.end();
+});
+tape('typename function(){} gives "function"', function(test){
+    test.plan(1);
+    test.equal(typename(function(){}), 'function'); 
+    test.end();
+});
+tape('typename new Function("return 1;") gives "function"', function(test){
+    test.plan(1);
+    test.equal(typename(new Function("return 1;")), 'function'); 
+    test.end();
+});
+tape('typename undefined gives "undefined"', function(test){
+    test.plan(1);
+    test.equal(typename(undefined), 'undefined'); 
     test.end();
 });
 tape('typename null gives "null"', function(test){

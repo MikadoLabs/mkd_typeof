@@ -24,12 +24,22 @@
         switch (nativeName){
         case 'object':
             if (data === null)
-              return 'null';
-            if (data.constructor === Array)
-              return 'array';
-            if (data.constructor === RegExp)
-              return 'regexp';
-            return 'object';
+                return 'null';
+            switch (data.constructor){
+            case Array:
+                return 'array';
+            case Boolean:
+                return 'boolean';
+            case Number:
+                return 'number';
+            case RegExp:
+                return 'regexp';
+            case String:
+                return 'string';
+            default:
+                return 'object';
+            }
+            break; // Useless but makes a warning go away.
         case 'number':
             if (isNaN(data))
                 return 'nan';
