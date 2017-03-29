@@ -18,6 +18,8 @@
         case 'number':
             if (isNaN(data))
                 return 'nan';
+            if (data === Infinity || data === -Infinity)
+                return 'infinity';
             return 'number';
         default:
             return nativeName;
