@@ -30,6 +30,8 @@
                 return 'array';
             case Boolean:
                 return 'boolean';
+            case Error:
+                return 'error';
             case Number:
                 return 'number';
             case RegExp:
@@ -39,7 +41,7 @@
             default:
                 return 'object';
             }
-            break; // Useless but makes a warning go away.
+            break; // Never reached but makes a warning go away.
         case 'number':
             if (isNaN(data))
                 return 'nan';

@@ -106,3 +106,8 @@ tape('typename new RegExp("a") gives "regexp"', function(test){
     test.equal(typename(new RegExp("a")), 'regexp'); 
     test.end();
 });
+tape('typename new Error("e") gives "error"', function(test){
+    test.plan(1);
+    test.equal(typename(new Error("e")), 'error');
+    test.end();
+});

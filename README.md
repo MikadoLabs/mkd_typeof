@@ -11,22 +11,36 @@ Very often we find ourselves adding the same set of checks in addition to
 
 Classical NodeJS way:
 
-```
-var typename = require('typename');
+```js
+const typename = require('typename');
 ```
 
 New EcmasScript syntax available to NodeJS or browsers with, say, Babel:
 
-```
+```js
 import typename from 'typename';
 ```
 
 ## Using
 
-```
+```js
 console.log(typename(null));
 console.log(typename({}));
 console.log(typename([]));
+```
+
+# Install
+
+NodeJS:
+
+```sh
+$ npm install --save typename
+```
+
+Browser:
+
+```html
+<script src="/path/to/typename.js"></script>
 ```
 
 # Caveats
