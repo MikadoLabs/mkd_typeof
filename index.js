@@ -25,4 +25,13 @@
         return typename;
     };
 
+    if (typeof exports !== 'undefined'){
+        if (typeof module !== 'undefined' && module.exports){
+            exports = module.exports = typename;
+        }
+        exports.typename = typename;
+    }else{
+        root.typename = typename;
+    }
+
 }).call(this);
