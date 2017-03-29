@@ -15,6 +15,10 @@
             if (data.constructor === RegExp)
               return 'regexp';
             return 'object';
+        case 'number':
+            if (isNaN(data))
+                return 'nan';
+            return 'number';
         default:
             return nativeName;
         }
