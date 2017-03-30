@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/MikadoLabs/typename/issues"
   },
-  "homepage": "https://github.com/MikadoLabs/typename#readme"
+  "homepage": "https://github.com/MikadoLabs/typename#readme",
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "^11.1.2",
+    "eslint-plugin-import": "^2.2.0",
+    "tape": "^4.6.3"
+  }
 }

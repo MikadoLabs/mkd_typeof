@@ -116,3 +116,7 @@ tape('typename new RegExp("a") gives "regexp"', function(test){
     test.equal(typename(new RegExp("a")), 'regexp'); 
     test.end();
 });
+/* TODO: if there is Map run Map test. */
+/* TODO: if there is WeakMap run WeakMap test. */
+/* TODO: if there is Set run Set test. */
+/* TODO: if there is WeakSet run WeakSet test. */

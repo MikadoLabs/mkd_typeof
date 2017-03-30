@@ -13,13 +13,14 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-(function(){
+(function defineTypenameModule(){
     'use strict';
-    var root = this;
-    var previous = root.typename;
+
+    const root = this;
+    const previous = root.typename;
     
-    var typename = function(data){
-        var nativeName = typeof data;
+    const typename = function typename(data){
+        const nativeName = typeof data;
 
         switch (nativeName){
         case 'object':
@@ -55,7 +56,6 @@
             default:
                 return 'object';
             }
-            break; // Never reached but makes a warning go away.
         case 'number':
             if (isNaN(data))
                 return 'nan';
@@ -67,18 +67,16 @@
         }
     };
 
-    typename.noConflict = function(){
+    typename.noConflict = function typenameNoConflict(){
         root.typename = previous;
         return typename;
     };
 
     if (typeof exports !== 'undefined'){
-        if (typeof module !== 'undefined' && module.exports){
+        if (typeof module !== 'undefined' && module.exports)
             exports = module.exports = typename;
-        }
         exports.typename = typename;
     }else{
         root.typename = typename;
     }
-
 }).call(this);
