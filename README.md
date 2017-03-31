@@ -50,4 +50,5 @@ sure it wouldn't be better to let them seen as objects.
 
 # Contributing
 
-[See CONTRIBUTING](https://github.com/MikadoLabs/typename/CONTRIBUTING.md)
+[See
+CONTRIBUTING](https://github.com/MikadoLabs/typename/blob/master/CONTRIBUTING.md)

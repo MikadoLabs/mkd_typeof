@@ -2,8 +2,9 @@
 
 You know this repository is and your contributions will be public and under the
 Apache software license 2. See
-[LICENSE](https://github.com/MikadoLabs/typename/LICENSE) and
-[AUTHORS](https://github.com/MikadoLabs/typename/AUTHORS) for details.
+[LICENSE](https://github.com/MikadoLabs/typename/blob/master/LICENSE) and
+[AUTHORS](https://github.com/MikadoLabs/typename/blob/master/AUTHORS) for
+details.
 
 # NPM
 
