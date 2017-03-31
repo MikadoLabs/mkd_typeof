@@ -47,3 +47,7 @@ Browser:
 
 Numbers created with `new Number(...)` are detected as numbers but we're not
 sure it wouldn't be better to let them seen as objects.
+
+# Contributing
+
+[See CONTRIBUTING](https://github.com/MikadoLabs/typename/CONTRIBUTING.md)

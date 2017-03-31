@@ -1,0 +1,36 @@
+extends: airbnb-base
+plugins:
+    - import
+rules:
+    indent:
+        - error
+        - 4
+    keyword-spacing:
+        - error
+        - before: false
+          after: true
+          overrides:
+              else:
+                  after: false
+    curly:
+        - error
+        - multi
+        - consistent
+    space-before-function-paren:
+        - error
+        - anonymous: never
+          named: never
+          asyncArrow: ignore
+    no-trailing-spaces:
+        - error
+        - skipBlankLines: true
+    space-before-blocks:
+        - error
+        - functions: never
+          keywords: never
+          classes: never
+    no-multi-assign:
+        - off
+    strict:
+        - off
+        - function
