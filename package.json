@@ -4,7 +4,8 @@
   "description": "Extended typeof",
   "main": "index.js",
   "scripts": {
-    "test": "tape tests/index.js"
+    "test": "tape tests/index.js",
+    "build": "uglifyjs index.js -c \"evaluate=false\" -m --source-map dist/typename-min.map -o dist/typename-min.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "eslint": "^3.18.0",
     "eslint-config-airbnb-base": "^11.1.2",
     "eslint-plugin-import": "^2.2.0",
-    "tape": "^4.6.3"
+    "tape": "^4.6.3",
+    "uglify-js": "^2.8.20"
   }
 }
