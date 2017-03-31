@@ -35,6 +35,12 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 [More information here.](https://github.com/mantoni/eslint_d.js)
 
+# Files header
+
+Don't forget to add the licensing preamble to your new files. As shown in the
+other source code files in this repository and as explained in
+[LICENSE](https://github.com/MikadoLabs/typename/blob/master/LICENSE).
+
 # AUTHORS
 
 When you add your first contribution, add your name to the `AUTHORS` file as
