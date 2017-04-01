@@ -39,12 +39,37 @@ New EcmasScript syntax available to NodeJS or browsers with, say, Babel:
 import typename from 'typename';
 ```
 
+For browsers it will be loaded as with any other module.
+
 ## Using
 
 ```js
 console.log(typename(null));
 console.log(typename({}));
 console.log(typename([]));
+```
+
+Sample:
+
+```
+> typename([]);
+'array'
+> typename(null)
+'null'
+> typename({});
+'object'
+> typename(undefined);
+'undefined'
+> typename(-Infinity);
+'infinity'
+> typename(NaN);
+'nan'
+> typename(1);
+'number'
+> typename(1.0);
+'number'
+> typename('1');
+'string'
 ```
 
 # Install
