@@ -14,9 +14,9 @@
    limitations under the License.
 -->
 
-[![Build Status](https://travis-ci.org/MikadoLabs/typename.png?branch=master)](https://travis-ci.org/MikadoLabs/typename)
+[![Build Status](https://travis-ci.org/MikadoLabs/mkd_typeof.png?branch=master)](https://travis-ci.org/MikadoLabs/mkd_typeof)
 
-# typename
+# mkd_typeof
 
 Small extended `typeof`.
 
@@ -30,13 +30,13 @@ Very often we find ourselves adding the same set of checks in addition to
 Classical NodeJS way:
 
 ```js
-const typename = require('typename');
+const mkd_typeof = require('mkd_typeof');
 ```
 
 New EcmasScript syntax available to NodeJS or browsers with, say, Babel:
 
 ```js
-import typename from 'typename';
+import mkd_typeof from 'mkd_typeof';
 ```
 
 For browsers it will be loaded as with any other module.
@@ -44,31 +44,31 @@ For browsers it will be loaded as with any other module.
 ## Using
 
 ```js
-console.log(typename(null));
-console.log(typename({}));
-console.log(typename([]));
+console.log(mkd_typeof(null));
+console.log(mkd_typeof({}));
+console.log(mkd_typeof([]));
 ```
 
 Sample:
 
 ```
-> typename([]);
+> mkd_typeof([]);
 'array'
-> typename(null)
+> mkd_typeof(null)
 'null'
-> typename({});
+> mkd_typeof({});
 'object'
-> typename(undefined);
+> mkd_typeof(undefined);
 'undefined'
-> typename(-Infinity);
+> mkd_typeof(-Infinity);
 'infinity'
-> typename(NaN);
+> mkd_typeof(NaN);
 'nan'
-> typename(1);
+> mkd_typeof(1);
 'number'
-> typename(1.0);
+> mkd_typeof(1.0);
 'number'
-> typename('1');
+> mkd_typeof('1');
 'string'
 ```
 
@@ -77,13 +77,13 @@ Sample:
 NodeJS:
 
 ```sh
-$ npm install --save typename
+$ npm install --save mkd_typeof
 ```
 
 Browser:
 
 ```html
-<script src="/path/to/typename.js"></script>
+<script src="/path/to/mkd_typeof.js"></script>
 ```
 
 # Caveats
@@ -94,4 +94,4 @@ sure it wouldn't be better to let them seen as objects.
 # Contributing
 
 [See
-CONTRIBUTING](https://github.com/MikadoLabs/typename/blob/master/CONTRIBUTING.md)
+CONTRIBUTING](https://github.com/MikadoLabs/mkd_typeof/blob/master/CONTRIBUTING.md)

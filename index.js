@@ -17,9 +17,9 @@
     'use strict';
 
     const root = this;
-    const previous = root.typename;
+    const previous = root.mkd_typeof;
     
-    const typename = function typename(data){
+    const mkd_typeof = function mkd_typeof(data){
         const nativeName = typeof data;
 
         switch (nativeName){
@@ -67,16 +67,16 @@
         }
     };
 
-    typename.noConflict = function typenameNoConflict(){
-        root.typename = previous;
-        return typename;
+    mkd_typeof.noConflict = function mkd_typeofNoConflict(){
+        root.mkd_typeof = previous;
+        return mkd_typeof;
     };
 
     if (typeof exports !== 'undefined'){
         if (typeof module !== 'undefined' && module.exports)
-            exports = module.exports = typename;
-        exports.typename = typename;
+            exports = module.exports = mkd_typeof;
+        exports.mkd_typeof = mkd_typeof;
     }else{
-        root.typename = typename;
+        root.mkd_typeof = mkd_typeof;
     }
 }).call(this);

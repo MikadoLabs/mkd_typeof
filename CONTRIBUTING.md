@@ -18,8 +18,8 @@
 
 You know this repository is and your contributions will be public and under the
 Apache software license 2. See
-[LICENSE](https://github.com/MikadoLabs/typename/blob/master/LICENSE) and
-[AUTHORS](https://github.com/MikadoLabs/typename/blob/master/AUTHORS) for
+[LICENSE](https://github.com/MikadoLabs/mkd_typeof/blob/master/LICENSE) and
+[AUTHORS](https://github.com/MikadoLabs/mkd_typeof/blob/master/AUTHORS) for
 details.
 
 # NPM
@@ -55,7 +55,7 @@ let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 Don't forget to add the licensing preamble to your new files. As shown in the
 other source code files in this repository and as explained in
-[LICENSE](https://github.com/MikadoLabs/typename/blob/master/LICENSE).
+[LICENSE](https://github.com/MikadoLabs/mkd_typeof/blob/master/LICENSE).
 
 # AUTHORS
 
