@@ -1,15 +1,15 @@
 {
-  "name": "typename",
+  "name": "mkd_typeof",
   "version": "1.0.0",
   "description": "Extended typeof",
   "main": "index.js",
   "scripts": {
     "test": "tape tests/index.js",
-    "build": "uglifyjs index.js -c \"evaluate=false\" -m --source-map dist/typename-min.map -o dist/typename-min.js"
+    "build": "uglifyjs index.js -c \"evaluate=false\" -m --source-map dist/mkd_typeof-min.map -o dist/mkd_typeof-min.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MikadoLabs/typename.git"
+    "url": "git+https://github.com/MikadoLabs/mkd_typeof.git"
   },
   "keywords": [
     "typeof",
@@ -20,9 +20,9 @@
   "author": "Mikado labs",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/MikadoLabs/typename/issues"
+    "url": "https://github.com/MikadoLabs/mkd_typeof/issues"
   },
-  "homepage": "https://github.com/MikadoLabs/typename#readme",
+  "homepage": "https://github.com/MikadoLabs/mkd_typeof#readme",
   "devDependencies": {
     "eslint": "^3.18.0",
     "eslint-config-airbnb-base": "^11.1.2",

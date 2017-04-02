@@ -14,106 +14,106 @@
    limitations under the License.
 */
 var tape = require('tape');
-var typename = require('../');
+var mkd_typeof = require('../');
 
-tape('typename 0 gives "number"', function(test){
+tape('mkd_typeof 0 gives "number"', function(test){
     test.plan(1);
-    test.equal(typename(1), 'number'); 
+    test.equal(mkd_typeof(1), 'number'); 
     test.end();
 });
-tape('typename new Number(0) gives "number"', function(test){
+tape('mkd_typeof new Number(0) gives "number"', function(test){
     test.plan(1);
-    test.equal(typename(new Number(0)), 'number'); 
+    test.equal(mkd_typeof(new Number(0)), 'number'); 
     test.end();
 });
-tape('typename NaN gives "nan"', function(test){
+tape('mkd_typeof NaN gives "nan"', function(test){
     test.plan(1);
-    test.equal(typename(NaN), 'nan'); 
+    test.equal(mkd_typeof(NaN), 'nan'); 
     test.end();
 });
-tape('typename Infinity gives "infinity"', function(test){
+tape('mkd_typeof Infinity gives "infinity"', function(test){
     test.plan(1);
-    test.equal(typename(Infinity), 'infinity'); 
+    test.equal(mkd_typeof(Infinity), 'infinity'); 
     test.end();
 });
-tape('typename -Infinity gives "infinity"', function(test){
+tape('mkd_typeof -Infinity gives "infinity"', function(test){
     test.plan(1);
-    test.equal(typename(-Infinity), 'infinity'); 
+    test.equal(mkd_typeof(-Infinity), 'infinity'); 
     test.end();
 });
-tape('typename "0" gives "string"', function(test){
+tape('mkd_typeof "0" gives "string"', function(test){
     test.plan(1);
-    test.equal(typename("0"), 'string'); 
+    test.equal(mkd_typeof("0"), 'string'); 
     test.end();
 });
-tape('typename new String("0") gives "string"', function(test){
+tape('mkd_typeof new String("0") gives "string"', function(test){
     test.plan(1);
-    test.equal(typename(new String("0")), 'string'); 
+    test.equal(mkd_typeof(new String("0")), 'string'); 
     test.end();
 });
-tape('typename false gives "boolean"', function(test){
+tape('mkd_typeof false gives "boolean"', function(test){
     test.plan(1);
-    test.equal(typename(false), 'boolean'); 
+    test.equal(mkd_typeof(false), 'boolean'); 
     test.end();
 });
-tape('typename true gives "boolean"', function(test){
+tape('mkd_typeof true gives "boolean"', function(test){
     test.plan(1);
-    test.equal(typename(true), 'boolean'); 
+    test.equal(mkd_typeof(true), 'boolean'); 
     test.end();
 });
-tape('typename new Boolean(false) gives "boolean"', function(test){
+tape('mkd_typeof new Boolean(false) gives "boolean"', function(test){
     test.plan(1);
-    test.equal(typename(new Boolean(false)), 'boolean'); 
+    test.equal(mkd_typeof(new Boolean(false)), 'boolean'); 
     test.end();
 });
-tape('typename function(){} gives "function"', function(test){
+tape('mkd_typeof function(){} gives "function"', function(test){
     test.plan(1);
-    test.equal(typename(function(){}), 'function'); 
+    test.equal(mkd_typeof(function(){}), 'function'); 
     test.end();
 });
-tape('typename new Function("return 1;") gives "function"', function(test){
+tape('mkd_typeof new Function("return 1;") gives "function"', function(test){
     test.plan(1);
-    test.equal(typename(new Function("return 1;")), 'function'); 
+    test.equal(mkd_typeof(new Function("return 1;")), 'function'); 
     test.end();
 });
-tape('typename undefined gives "undefined"', function(test){
+tape('mkd_typeof undefined gives "undefined"', function(test){
     test.plan(1);
-    test.equal(typename(undefined), 'undefined'); 
+    test.equal(mkd_typeof(undefined), 'undefined'); 
     test.end();
 });
-tape('typename null gives "null"', function(test){
+tape('mkd_typeof null gives "null"', function(test){
     test.plan(1);
-    test.equal(typename(null), 'null'); 
+    test.equal(mkd_typeof(null), 'null'); 
     test.end();
 });
-tape('typename [] gives "array"', function(test){
+tape('mkd_typeof [] gives "array"', function(test){
     test.plan(1);
-    test.equal(typename([]), 'array'); 
+    test.equal(mkd_typeof([]), 'array'); 
     test.end();
 });
-tape('typename new Array() gives "array"', function(test){
+tape('mkd_typeof new Array() gives "array"', function(test){
     test.plan(1);
-    test.equal(typename(new Array()), 'array'); 
+    test.equal(mkd_typeof(new Array()), 'array'); 
     test.end();
 });
-tape('typename new Date() gives "date"', function(test){
+tape('mkd_typeof new Date() gives "date"', function(test){
     test.plan(1);
-    test.equal(typename(new Date()), 'date'); 
+    test.equal(mkd_typeof(new Date()), 'date'); 
     test.end();
 });
-tape('typename new Error("e") gives "error"', function(test){
+tape('mkd_typeof new Error("e") gives "error"', function(test){
     test.plan(1);
-    test.equal(typename(new Error("e")), 'error');
+    test.equal(mkd_typeof(new Error("e")), 'error');
     test.end();
 });
-tape('typename /a/ gives "regexp"', function(test){
+tape('mkd_typeof /a/ gives "regexp"', function(test){
     test.plan(1);
-    test.equal(typename(/a/), 'regexp'); 
+    test.equal(mkd_typeof(/a/), 'regexp'); 
     test.end();
 });
-tape('typename new RegExp("a") gives "regexp"', function(test){
+tape('mkd_typeof new RegExp("a") gives "regexp"', function(test){
     test.plan(1);
-    test.equal(typename(new RegExp("a")), 'regexp'); 
+    test.equal(mkd_typeof(new RegExp("a")), 'regexp'); 
     test.end();
 });
 /* TODO: if there is Map run Map test. */
